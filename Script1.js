@@ -35,7 +35,11 @@ var animate = function () {
     var zscale = document.getElementById("myRangez").value;
     var xrot = document.getElementById("myRangespdx").value / 10;
     var yrot = document.getElementById("myRangespdy").value / 10;
-    var zrot = document.getElementById("myRangespdz").value/10;
+    var zrot = document.getElementById("myRangespdz").value / 10;
+    object.scale.x -= 1
+    object.scale.y -= 1
+    object.scale.z -= 1
+
 	cube.rotation.x = xrot;
     cube.rotation.y = yrot;
     cube.rotation.z = zrot;

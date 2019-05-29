@@ -33,16 +33,13 @@ var animate = function () {
     var xrot = document.getElementById("myRangespdx").value / 10;
     var yrot = document.getElementById("myRangespdy").value / 10;
     var zrot = document.getElementById("myRangespdz").value / 10;
-    loader.scale.x = xscale;
-    loader.scale.y = yscale;
-    loader.scale.z = zscale;
 
 	cube.rotation.x = xrot;
     cube.rotation.y = yrot;
     cube.rotation.z = zrot;
-	cube.scale.x = 0*xscale;
-    cube.scale.y = 0 *yscale;
-    cube.scale.z = 0 *zscale;
+	cube.scale.x = xscale;
+    cube.scale.y = yscale;
+    cube.scale.z = zscale;
 	
 	renderer.render( scene, camera );
 };

@@ -16,16 +16,13 @@ scene.add( cube );
 
 var loader = new THREE.FBXLoader();
 loader.load('NewDarkCitrus.fbx', function (object) {
-    mixer = new THREE.AnimationMixer(object);
-    var action = mixer.clipAction(object.animations[0]);
-    action.play();
     object.traverse(function (child) {
         if (child.isMesh) {
             child.castShadow = true;
             child.receiveShadow = true;
         }
     });
-    scene.add(object);
+    scene.add( object );
 });
 camera.position.z = 5;
 var animate = function () {
